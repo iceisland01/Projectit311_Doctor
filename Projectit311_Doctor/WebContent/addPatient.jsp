@@ -11,10 +11,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<meta charset="UTF-8">
-	<title>สำหรับเจ้าหน้าที่</title>
-
-	  <style>
-      a.ex1 {
+	<title>บันทึกชื่อผู้ป่วย</title>
+	<style type="text/css" media="screen">
+		#patient-card td {  
+	  padding-bottom: 13px;
+		}
+		a.ex1 {
         margin-left:25px;
       }
       h4.textside{
@@ -22,8 +24,8 @@
         margin-bottom: 35px;
       }
       .textside{
-        margin-top: 35px;
-        margin-bottom: 35px;
+        margin-top: 25px;
+        margin-bottom: 25px;
       }
       .textside1{
         margin-left: 15px;
@@ -51,14 +53,27 @@
         padding: 10px;
         text-align: center;
       }
-      body{
+      fieldset.scheduler-border {
+    	border: 1px groove #ddd !important;
+   		 padding: 0 1.4em 1.4em 1.4em !important;
+   		 margin: 0 0 1.5em 0 !important;
+    	-webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 0px 0px 0px #000;
+	}
+
+	legend.scheduler-border {
+   		 font-size: 1.2em !important;
+    	font-weight: bold !important;
+    	text-align: left !important;
+	}
+	 body{
          font-family: 'Prompt', sans-serif;
-         background-color: #dbeefc;
       }
-</style>
+	</style>
+
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light container">
   <img src="img/cropped-sanpakoi-logo-web.png" alt="logo" style="width: 30%;">
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
@@ -93,22 +108,55 @@
     </ul>
   </div>
 </nav>
-		<div class=" container textside">
-			<h3 style="text-align:center;">สำหรับเจ้าหน้าที่</h3><br>
-			<center>
-			<table>
-				<tr>
-					<td><img src="img/iconFinish/ทำบัตรผู้ป่วย.png" alt="logo"></td>
-          			<td><img src="img/iconFinish/จัดคิวผู้ป่วย.png" alt="logo"></td>
-				</tr>
-				<tr>
-					<td><img src="img/iconFinish/ชำระค่ารักษา.png" alt="logo"></td>
-					<td><img src="img/iconFinish/บันทึกชื่อผู้ป่วย.png" alt="logo"></td>
-				</tr>
-			</table>
-			</center>
+
+	<div class="container textside">
+			<h3 style="text-align:center;">บันทึกชื่อผู้ป่วย</h3>
+		<div class="row">
+		  <div class="col-md-6">
+		  	<form action="#" name="frmPC" method="post">
+			  <fieldset class="scheduler-border">
+			    <legend>บันทึกชื่อผู้ป่วย</legend>
+			    <table id="patient-card" style="text-align:center;">
+			    	<tr>
+              <td>รหัสผู้ป่วย <input type="text" name="idpatientadd">  <input type="button" value="ค้นหา"></td>
+            </tr>
+			    </table> 
+          <table id="patient-card" style="text-align:left;">
+            <tr>
+              <td>รหัสผู้ป่วย   <input type="text" name="idpatientadd"></td>
+              <td>ชื่อ-นามสกุลผู้ป่วย <input type="text" name="namelastnameadd"> </td>
+            </tr>
+            <tr>
+              <td>ที่อยู่<textarea name="addpatient"></textarea></td>
+              <td>วันเดือนปีเกิด<input type="date" name="birthdayadd"></td>
+            </tr>
+          </table>	
+			  </fieldset>
+		  </div>
+      <div class="col-md-6">
+        <fieldset class="scheduler-border">
+          <legend>รายละเอียดผู้ป่วย</legend>
+          <table class="table table-bordered" id="patient-card" style="text-align:center;">
+            <tr>
+              <th>รหัสผู้ป่วย</th>
+              <th>ชื่อนามสกุล</th>
+              <th>ที่อยู่</th>
+              <th>วันเดือนปีเกิด</th>
+            </tr>
+          </table>   
+        </fieldset>
+        <div  style="text-align:center;">
+              <input type="button" class="btn btn-info" value="เพิ่มชื่อ">
+              <input type="button" class="btn btn-success" value="บันทึก">
+              <input type="button" class="btn btn-secondary"value="เเก้ไข">
+              <input type="button" class="btn btn-primary" value="ลบ">
+              <input type="reset" class="btn btn-danger" value="ยกเลิก">
+          </div>  
+      </form>
+      </div>
 		</div>
-<!-- Footer -->
+	</div>
+	<!-- Footer -->
     <footer class="footer container">
       <div class="footer1 ">
         <div class="row">
@@ -139,3 +187,4 @@
     <!-- Footer -->
 
 </body>
+</html>
