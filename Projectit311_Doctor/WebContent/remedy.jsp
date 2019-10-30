@@ -127,7 +127,7 @@
          <td>รหัสผู้ป่วย <input type="text" name="idpatient"></td>   
           </tr>
           <tr>
-         <td>อาการปัจจุบัน <textarea name="Currentsymptoms"></textarea></td>   
+         <td>อาการรักษา <textarea name="Currentsymptoms"></textarea></td>   
           </tr>
           <tr>
          <td>ชื่อเเพทย์<input type="text" name="idpatient"></textarea></td>   

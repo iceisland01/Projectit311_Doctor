@@ -7,30 +7,30 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 
 @Embeddable
-public class DoctorPatientID implements Serializable {
+public class UserPatientID implements Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
-	private Doctor doctor;
+	private User user;
 	
 	@ManyToOne
 	private Patient  patient ;
 
-	public DoctorPatientID() {
+	public UserPatientID() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public DoctorPatientID(Doctor doctor, Patient patient) {
+	public UserPatientID(User user, Patient patient) {
 		super();
-		this.doctor = doctor;
+		this.user = user;
 		this.patient = patient;
 	}
 
-	public Doctor getDoctor() {
-		return doctor;
+	public User getUser() {
+		return user;
 	}
 
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public Patient getPatient() {
@@ -40,6 +40,8 @@ public class DoctorPatientID implements Serializable {
 	public void setPatient(Patient patient) {
 		this.patient = patient;
 	}
+
+	
 	
 	
 

@@ -12,9 +12,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Appointment")
-public class DoctorPatient {
+public class UserPatient {
 	@EmbeddedId
-	private DoctorPatientID pk = new DoctorPatientID();
+	private UserPatientID pk = new UserPatientID();
 	
 	@Column(name="app_date")
 	private Date app_date;
@@ -25,12 +25,12 @@ public class DoctorPatient {
 	@Column(name="time")
 	private String time;
 
-	public DoctorPatient() {
+	public UserPatient() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public DoctorPatient(DoctorPatientID pk, Date app_date, String cause, String time) {
+	public UserPatient(UserPatientID pk, Date app_date, String cause, String time) {
 		super();
 		this.pk = pk;
 		this.app_date = app_date;
@@ -38,11 +38,11 @@ public class DoctorPatient {
 		this.time = time;
 	}
 
-	public DoctorPatientID getPk() {
+	public UserPatientID getPk() {
 		return pk;
 	}
 
-	public void setPk(DoctorPatientID pk) {
+	public void setPk(UserPatientID pk) {
 		this.pk = pk;
 	}
 

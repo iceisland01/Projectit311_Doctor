@@ -10,11 +10,13 @@ import model.Opd_Card;
 import model.Patient;
 import model.Payments;
 import model.Queue;
-import model.Remedy;
-import model.Doctor;
-import model.DoctorPatient;
-import model.DoctorPatientID;
-import model.Employee;
+import model.TypeUser;
+import model.User;
+import model.UserOpdcard;
+import model.UserOpdcardID;
+import model.UserPatient;
+import model.UserPatientID;
+import model.Login;
 
 
 
@@ -36,15 +38,18 @@ public class HibernateConnection {
 	database.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
 	Configuration cfg = new Configuration().setProperties(database).addPackage("model")
 			//.addAnnotatedClass(Employee.class)
-			.addAnnotatedClass(Doctor.class)
-			.addAnnotatedClass(Employee.class)
+			.addAnnotatedClass(Login.class)
+			.addAnnotatedClass(TypeUser.class)
 			.addAnnotatedClass(Opd_Card.class)
 			.addAnnotatedClass(Patient.class)
 			.addAnnotatedClass(Payments.class)
 			.addAnnotatedClass(Queue.class)
-			.addAnnotatedClass(Remedy.class)
-		    .addAnnotatedClass(DoctorPatient.class)
-			.addAnnotatedClass(DoctorPatientID.class)
+			.addAnnotatedClass(User.class)
+		    .addAnnotatedClass(UserPatient.class)
+			.addAnnotatedClass(UserPatientID.class)
+			.addAnnotatedClass(UserOpdcard.class)
+			.addAnnotatedClass(UserOpdcardID.class)
+			
 			
 			;
 	

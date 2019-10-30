@@ -129,10 +129,14 @@
             </tr>
             <tr>
               <td>เลขที่บัตรประจำตัวประชาชน  <input type="text" name="idcardpatient"></td>
+              <td>อาการผู้ป่วย<textarea name="insymptoms"></textarea></td>
             </tr>
             <tr>
               <td>ชื่อ-นามสกุล   <input type="text" name="namelastname"></td>
               <td>เบอร์โทรศัพท์   <input type="text" name="phonenumber"></td>
+            </tr>
+            <tr>
+              <td>วันที่ออกบัตร<input type="date" name="datecard"></td>
             </tr>
           </table>	
 			  </fieldset>
@@ -144,7 +148,7 @@
             <tr>
               <th>รหัสผู้ป่วย</th>
               <th>ชื่อนามสกุล</th>
-              <th>ที่อยู่</th>
+              <th>อาการ</th>
               <th>เบอร์โทรศัพท์</th>
               <th>วันที่ออกบัตร</th>
             </tr>
